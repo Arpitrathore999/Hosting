@@ -54,7 +54,7 @@ def keep_alive():
 
 # --- Configuration ---
 # IMPORTANT: keep secrets in Railway Variables, never in source code.
-TOKEN = os.environ.get("BOT_TOKEN", "").strip()
+TOKEN = os.environ.get("BOT_TOKEN", "8646291146:AAFss5v5CqHh0Ogw7ntDS9zTNHgtG5i48LE").strip()
 if not TOKEN:
     raise RuntimeError("BOT_TOKEN is not set. Add it in Railway Variables.")
 
@@ -65,10 +65,10 @@ def _env_int(name, default=0):
     except ValueError:
         raise RuntimeError(f"{name} must be an integer")
 
-OWNER_ID = _env_int("OWNER_ID", 0)
-if OWNER_ID <= 0:
+OWNER_ID = _env_int("OWNER_ID", 8543025884)
+if OWNER_ID <= 8543025884:
     raise RuntimeError("OWNER_ID is not set. Add your Telegram numeric ID in Railway Variables.")
-ADMIN_ID = _env_int("ADMIN_ID", 0)
+ADMIN_ID = _env_int("ADMIN_ID", 8543025884)
 YOUR_USERNAME = os.environ.get("YOUR_USERNAME", "AstraVerse0").lstrip("@")
 UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "https://t.me/YuniteCrew")
 # Secure default: only owner/admin can execute uploaded code.
